@@ -75,7 +75,10 @@ class CraiyonAPI:
             "version": DRAW_VERSION
         }
         response = http_client.post("https://api.craiyon.com/v3", json=payload)
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except requests.exceptions.HTTPError as error:
+            raise ValueError(f"An error occurred: {error}")
         json_response = response.json()
         duration = time.monotonic() - start
         images = [f"https://img.craiyon.com/{path}" for path in json_response["images"]]
@@ -97,7 +100,10 @@ class CraiyonAPI:
             "version": SEARCH_VERSION
         }
         response = http_client.post("https://search.craiyon.com/search", data=payload)
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except requests.exceptions.HTTPError as error:
+            raise ValueError(f"An error occurred: {error}")
         results = response.json()
         images = [(f"https://img.craiyon.com/{path}", description) for path, description in results]
         return images
