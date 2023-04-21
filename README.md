@@ -1,3 +1,4 @@
+[![DeepSource](https://app.deepsource.com/gh/andrewtryder/python-craiyon-api.svg/?label=active+issues&show_trend=true&token=c9LIx6WG61VNwnUxU6tV-3dv)](https://app.deepsource.com/gh/andrewtryder/python-craiyon-api/?ref=repository-badge)[![DeepSource](https://app.deepsource.com/gh/andrewtryder/python-craiyon-api.svg/?label=resolved+issues&show_trend=true&token=c9LIx6WG61VNwnUxU6tV-3dv)](https://app.deepsource.com/gh/andrewtryder/python-craiyon-api/?ref=repository-badge)
 # python-craiyon-api
 
 python-craiyon-api is a Python Library for interacting with the unofficial Craiyon API.
