@@ -3,6 +3,7 @@ from craiyonapi import CraiyonAPI
 
 
 def main():
+    """Search for images of mountains."""
     with requests.Session() as http_client:
         api = CraiyonAPI(model=CraiyonAPI.Model.Photo)
         results = api.search(http_client, "mountain")
